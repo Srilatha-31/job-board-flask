@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ job.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="card shadow-lg border-0">
+
+        <div class="card-body p-5">
+
+            <h2 class="text-primary">{{ job.title }}</h2>
+
+            <h5 class="text-muted">{{ job.company }}</h5>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <p><strong>📍 Location:</strong> {{ job.location }}</p>
+
+                    <p><strong>💰 Salary:</strong> {{ job.salary }}</p>
+
+                    <p><strong>💼 Experience:</strong> {{ job.experience }}</p>
+
+                    <p><strong>🕒 Job Type:</strong> {{ job.type }}</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <h4>Job Description</h4>
+
+            <p>{{ job.description }}</p>
+
+            <hr>
+
+            <h4>Required Skills</h4>
+
+            <ul>
+
+                {% for skill in job.skills %}
+
+                <li>{{ skill }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+            <hr>
+
+            <h4>Responsibilities</h4>
+
+            <ul>
+
+                {% for responsibility in job.responsibilities %}
+
+                <li>{{ responsibility }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+            <hr>
+
+            <a href="{{ job.apply_link }}"
+                target="_blank"
+                class="btn btn-success btn-lg">
+
+                Apply Now
+
+            </a>
+
+            <a href="/"
+               class="btn btn-secondary btn-lg">
+
+                Back
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

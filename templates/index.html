@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="hero text-center text-white">
+    <div class="container">
+        <h1>Find Your Dream Job</h1>
+        <p class="lead">
+            Search jobs from top companies across India.
+        </p>
+
+        <div class="mt-4">
+
+            <a href="#jobs" class="btn btn-light btn-lg">
+                Explore Jobs
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Statistics -->
+
+<section class="container mt-5">
+
+<div class="row text-center">
+
+<div class="col-md-4">
+
+<h2>{{ total_jobs }}</h2>
+
+<p>Total Jobs</p>
+
+</div>
+
+<div class="col-md-4">
+
+<h2>20+</h2>
+
+<p>Companies</p>
+
+</div>
+
+<div class="col-md-4">
+
+<h2>500+</h2>
+
+<p>Applications</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Search -->
+
+<section class="container mt-5">
+
+<form method="GET">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<input
+class="form-control"
+name="search"
+placeholder="Search Job">
+
+</div>
+
+<div class="col-md-3">
+
+<select
+class="form-select"
+name="location">
+
+<option value="">All Locations</option>
+
+<option>Hyderabad</option>
+
+<option>Bengaluru</option>
+
+<option>Chennai</option>
+
+<option>Pune</option>
+
+</select>
+
+</div>
+
+<div class="col-md-3">
+
+<select
+class="form-select"
+name="job_type">
+
+<option value="">All Types</option>
+
+<option>Full Time</option>
+
+<option>Internship</option>
+
+</select>
+
+</div>
+
+<div class="col-md-2">
+
+<button class="btn btn-primary w-100">
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</section>
+
+
+
+<!-- Featured Jobs -->
+
+<section class="container mt-5">
+
+<h2 class="mb-4">
+
+Featured Jobs
+
+</h2>
+
+<div class="row">
+
+{% for job in featured_jobs %}
+
+<div class="col-md-4">
+
+<div class="card job-card shadow">
+
+<div class="card-body">
+
+<h4>{{ job.title }}</h4>
+
+<h6>{{ job.company }}</h6>
+
+<p>{{ job.location }}</p>
+
+<a
+href="/job/{{ job.id }}"
+class="btn btn-outline-primary">
+
+View Details
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+
+
+<!-- Latest Jobs -->
+
+<section id="jobs" class="container mt-5">
+
+<h2 class="mb-4">
+
+Latest Jobs
+
+</h2>
+
+<div class="row">
+
+{% if jobs %}
+
+{% for job in jobs %}
+
+<div class="col-md-4 mb-4">
+
+<div class="card job-card shadow">
+
+<div class="card-body">
+
+<h4>{{ job.title }}</h4>
+
+<h6 class="text-primary">
+
+{{ job.company }}
+
+</h6>
+
+<hr>
+
+<p>📍 {{ job.location }}</p>
+
+<p>💰 {{ job.salary }}</p>
+
+<p>📅 {{ job.experience }}</p>
+
+<p>
+
+<span class="badge bg-success">
+
+{{ job.type }}
+
+</span>
+
+</p>
+
+<a
+href="/job/{{ job.id }}"
+class="btn btn-primary">
+
+View Details
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<div class="text-center">
+
+<h3>No Jobs Found</h3>
+
+<p>
+
+Try another search.
+
+</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</section>
+
+{% endblock %}

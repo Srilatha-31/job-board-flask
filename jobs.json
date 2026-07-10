@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "Python Developer",
+    "company": "Infosys",
+    "location": "Hyderabad",
+    "salary": "6 LPA",
+    "experience": "0-1 Years",
+    "type": "Full Time",
+    "description": "Develop backend applications using Python and Flask.",
+    "skills": ["Python", "Flask", "SQL", "Git"],
+    "responsibilities": [
+      "Develop APIs",
+      "Fix bugs",
+      "Write clean code"
+    ],
+    "apply_link": "https://career.infosys.com/"
+  },
+  {
+    "id": 2,
+    "title": "Frontend Developer",
+    "company": "Accenture",
+    "location": "Bengaluru",
+    "salary": "5.5 LPA",
+    "experience": "Fresher",
+    "type": "Full Time",
+    "description": "Build responsive web applications.",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "responsibilities": [
+      "Design UI",
+      "Implement responsive pages",
+      "Optimize performance"
+    ],
+    "apply_link": "https://www.accenture.com/in-en/careers"
+  },
+  {
+    "id": 3,
+    "title": "Data Analyst",
+    "company": "TCS",
+    "location": "Chennai",
+    "salary": "5 LPA",
+    "experience": "0-2 Years",
+    "type": "Full Time",
+    "description": "Analyze business data and create reports.",
+    "skills": ["Python", "SQL", "Excel"],
+    "responsibilities": [
+      "Prepare reports",
+      "Analyze datasets",
+      "Create dashboards"
+    ],
+    "apply_link":"https://www.tcs.com/careers"
+  },
+  {
+    "id": 4,
+    "title": "Java Developer",
+    "company": "Wipro",
+    "location": "Hyderabad",
+    "salary": "6.2 LPA",
+    "experience": "1 Year",
+    "type": "Full Time",
+    "description": "Develop enterprise Java applications.",
+    "skills": ["Java", "Spring Boot", "MySQL"],
+    "responsibilities": [
+      "Develop backend",
+      "Maintain APIs",
+      "Fix production issues"
+    ],
+    "apply_link":"https://careers.wipro.com/"
+  },
+  {
+    "id": 5,
+    "title": "UI/UX Designer",
+    "company": "Cognizant",
+    "location": "Pune",
+    "salary": "5.8 LPA",
+    "experience": "Fresher",
+    "type": "Internship",
+    "description": "Create user-friendly interface designs.",
+    "skills": ["Figma", "Adobe XD", "Wireframing"],
+    "responsibilities": [
+      "Design layouts",
+      "Create prototypes",
+      "Improve user experience"
+    ],
+    "apply_link":"https://careers.cognizant.com/"
+  }
+]
